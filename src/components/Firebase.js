@@ -6,7 +6,7 @@ import { getFirestore } from 'firebase/firestore';
 import { getAnalytics } from 'firebase/analytics';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyArZqDkz444WoBQEt0-mJfJAR_fWo1uitQ",
+  apiKey: "AIzaSyArZqDkz444WoBQEt0-mJfJAR_fWo1uitQ"
   authDomain: "shop-777-4c502.firebaseapp.com",
   projectId: "shop-777-4c502",
   storageBucket: "shop-777-4c502.appspot.com",
