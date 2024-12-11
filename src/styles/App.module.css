@@ -1,0 +1,90 @@
+/* Default navbar styles */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for initial state */
+  backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+}
+
+/* Navbar hidden state */
+.nav.hidden {
+  transform: translateY(-100%); /* Move the navbar out of view */
+}
+
+/* Navbar when scrolled */
+.nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.9); /* Slightly darker when scrolled */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Subtle shadow when scrolled */
+  transform: translateY(0); /* Reset any transform on scroll */
+}
+
+/* Hover effects */
+.nav:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* More pronounced shadow on hover */
+}
+
+/* Logo styles */
+.navLogo {
+  font-size: 1.8rem; /* Slightly larger font size for the logo */
+  font-weight: bold;
+  color: #ff0000; /* Bright red color for the logo */
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Slightly increased letter spacing */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navLogo:hover {
+  color: #ff6666; /* Subtle hover color change */
+}
+
+/* Link styles */
+.navLinks {
+  display: flex;
+  gap: 2rem; /* Increased gap between links */
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  font-size: 1.1rem; /* Slightly larger font size */
+  font-weight: 500;
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px; /* Thicker underline */
+  bottom: 0;
+  left: 50%;
+  background-color: #ff0000; /* Bright red underline */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.link:hover {
+  color: #ff0000; /* Change text color on hover */
+  transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.link.active {
+  background-color: #ff0000; /* Highlight active link */
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Shadow for active link */
+}

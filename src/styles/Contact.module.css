@@ -1,0 +1,379 @@
+/* General container styles */
+/* General container styles */
+.container {
+  display: flex;
+  justify-content: center; /* Center the form and profile card */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure the container covers the full viewport height */
+  padding: 2rem;
+  background: linear-gradient(145deg, #333, #555), 
+              url('pbackground.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  background-blend-mode: overlay; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  position: relative;
+}
+
+/* Form styles */
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px; /* Increased gap to prevent overflow */
+  background: rgba(0, 0, 0, 0.7); /* Transparent background */
+  border-radius: 2.5em;
+  padding: 40px; /* Increased padding for more space */
+  width: 400px; /* Increased width */
+  height: auto; /* Adjusted height to auto to fit content */
+  max-height: 80vh; /* Max height to fit within viewport */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  position: relative;
+  animation: formSlideIn 1s ease-out; /* Slide-in animation for the form */
+}
+
+.form::before {
+  content: '';
+  background-image: linear-gradient(45deg, #777, #999);
+  height: 100%; /* Fit to form's height */
+  width: 100%; /* Fit to form's width */
+  position: absolute;
+  top: -10px; /* Adjusted to align with increased padding */
+  left: -10px; /* Adjusted to align with increased padding */
+  z-index: -1;
+  border-radius: 2.7em;
+  animation: formBorderPulse 3s infinite; /* Slow pulse animation */
+}
+
+/* Form heading styles */
+.form_details {
+  font-size: 2rem;
+  color: #f0f0f0;
+  animation: fadeInUp 1s ease-out; /* Fade-in and slide-up animation */
+}
+
+/* Contact form styles */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Label styles */
+label {
+  margin-bottom: 1rem;
+}
+
+/* Input and Textarea styles */
+.input, .textarea {
+  width: calc(100% - 20px); /* Adjusted width to fit within the form */
+  padding: 10px; /* Increased padding for better spacing */
+  margin-bottom: 20px;
+  border: 1px solid #aaa;
+  border-bottom: 1px solid #666;
+  outline: none;
+  background-color: transparent; /* Transparent background */
+  color: #fff; /* White text color */
+  font-family: Arial, Helvetica, sans-serif;
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.input::placeholder, .textarea::placeholder {
+  color: #888;
+}
+
+.input:focus, .textarea:focus {
+  border: 1px solid #666;
+  border-bottom: 1px solid #aaa;
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly darker background on focus */
+  color: #fff;
+}
+
+/* Textarea styles */
+.textarea {
+  height: 140px; /* Increased height for better fit */
+}
+
+/* Button styles */
+.button {
+  background-color: #333; /* Base background color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Spacing inside the button */
+  font-size: 1rem; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  text-transform: uppercase; /* Uppercase text */
+  animation: buttonFadeIn 1s ease-out; /* Fade-in animation for the button */
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #555; /* Darker shade of the base color */
+  transform: translateY(-4px); /* Subtle lift effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Button active effect */
+.button:active {
+  background-color: #222; /* Even darker shade for active state */
+  transform: translateY(1px); /* Slightly depress the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduced shadow on click */
+}
+
+/* Right section styles */
+
+
+/* Keyframe animations
+@keyframes formSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes formBorderPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes buttonFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+/* Loader styles */
+.loader {
+  position: absolute; /* Position it relative to the section */
+  top: 0; /* Align to the top of the section */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  width: 108px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loader::after,
+.loader::before {
+  content: "";
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  background-color: #fff;
+  background-image: radial-gradient(circle 14px, #0d161b 100%, transparent 0);
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  animation: eyeMove 10s infinite, blink 10s infinite;
+}
+
+@keyframes eyeMove {
+  0%,
+  10% {
+    background-position: 0px 0px;
+  }
+  13%,
+  40% {
+    background-position: -15px 0px;
+  }
+  43%,
+  70% {
+    background-position: 15px 0px;
+  }
+  73%,
+  90% {
+    background-position: 0px 15px;
+  }
+  93%,
+  100% {
+    background-position: 0px 0px;
+  }
+}
+
+@keyframes blink {
+  0%,
+  10%,
+  12%,
+  20%,
+  22%,
+  40%,
+  42%,
+  60%,
+  62%,
+  70%,
+  72%,
+  90%,
+  92%,
+  98%,
+  100% {
+    height: 48px;
+  }
+  11%,
+  21%,
+  41%,
+  61%,
+  71%,
+  91%,
+  99% {
+    height: 18px;
+  }
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(145deg, #333, #555), 
+              url('pbackground.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  position: relative;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 2.5em;
+  padding: 40px;
+  width: 400px;
+  height: auto;
+  max-height: 80vh;
+  box-sizing: border-box;
+  position: relative;
+  animation: formSlideIn 1s ease-out;
+}
+
+.form::before {
+  content: '';
+  background-image: linear-gradient(45deg, #777, #999);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+  border-radius: 2.7em;
+  animation: formBorderPulse 3s infinite;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.card-photo {
+  width: 100%;
+  height: 60%;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-photo:hover {
+  transform: scale(1.08);
+}
+
+.card-title {
+  color: #fefefe;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards 0.3s;
+}
+
+.card-title span {
+  font-size: 14px;
+  color: #a3a3a3;
+}
+
+.card-socials {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  gap: 15px;
+}
+
+.card-socials-btn {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards 0.5s;
+}
+
+.card-socials-btn svg {
+  fill: #fefefe;
+  width: 100%;
+  height: 100%;
+}
+
+.card-socials-btn:hover {
+  transform: translateY(-5px);
+  opacity: 0.8;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

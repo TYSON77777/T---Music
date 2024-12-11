@@ -1,0 +1,176 @@
+@keyframes fastFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.about {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url('about.jpg'); /* Ensure correct path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.videoBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(40%); /* Darker video background */
+}
+
+.content {
+  z-index: 1;
+  opacity: 0;
+  animation: fastFadeIn 1.2s ease-in-out forwards;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent box background */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  max-width: 800px;
+}
+
+.content h1 {
+  opacity: 0;
+  animation: fastFadeIn 1s ease-in-out 0.2s forwards;
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  opacity: 0;
+  animation: fastFadeIn 1s ease-in-out 0.3s forwards;
+  color: #ddd;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.keyInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  opacity: 0;
+  animation: fastFadeIn 1s ease-in-out 0.5s forwards;
+}
+
+.keyInfo > div {
+  width: 30%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Light translucent box for sections */
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.keyInfo > div:hover {
+  transform: translateY(-10px); /* Subtle lift on hover */
+}
+
+.keyInfo h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.keyInfo p {
+  color: #ccc;
+  font-size: 1rem;
+}
+/* About Section - Responsive Enhancements */
+
+/* For tablets and small laptops */
+@media (max-width: 992px) {
+  .about {
+    padding: 15px;
+  }
+  
+  .content {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .keyInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .keyInfo > div {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+  .about {
+    padding: 10px;
+  }
+
+  .content {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .keyInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .keyInfo > div {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Additional refinements for very small devices */
+@media (max-width: 400px) {
+  .content h1 {
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 0.85rem;
+  }
+
+  .keyInfo > div {
+    padding: 10px;
+  }
+}
+
+

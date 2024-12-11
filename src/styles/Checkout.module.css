@@ -1,0 +1,60 @@
+/* Checkout.module.css */
+.checkoutContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Full viewport height */
+    background-color: #f8f9fa;
+    /* Light background color */
+    border: 1px solid #dee2e6;
+    /* Subtle border */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    padding: 20px;
+    /* Inner padding */
+    font-family: 'Helvetica Neue', sans-serif;
+    /* Clean font */
+    animation: slideIn 0.5s ease;
+    /* Slide-in animation */
+}
+
+.checkoutTitle {
+    font-size: 2rem;
+    /* Large title */
+    color: #007bff;
+    /* Bootstrap blue color */
+    margin-bottom: 1rem;
+    /* Spacing below the title */
+    text-transform: uppercase;
+    /* Uppercase text */
+    letter-spacing: 1px;
+    /* Slight letter spacing */
+}
+
+.checkoutMessage {
+    font-size: 1.25rem;
+    /* Medium message size */
+    color: #495057;
+    /* Darker gray color */
+    text-align: center;
+    /* Center text alignment */
+    padding: 0 15px;
+    /* Padding for horizontal spacing */
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

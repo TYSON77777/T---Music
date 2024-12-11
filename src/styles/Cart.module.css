@@ -1,0 +1,197 @@
+/* Cart.module.css */
+/* Container for the cart */
+.cartContainer {
+  padding: 30px;
+  max-width: 900px;
+  margin: 40px auto;
+  /* Added margin for spacing from top */
+  background-color: #f9f9f9;
+  /* Light gray background for a softer look */
+  border-radius: 20px;
+  /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Softer shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the cart container */
+.cartContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  /* Enhanced shadow on hover */
+}
+
+/* Title styling */
+.cartTitle {
+  font-size: 2.5rem;
+  /* Larger title */
+  margin-bottom: 30px;
+  /* Space below the title */
+  color: #333;
+  /* Dark gray for good contrast */
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* Uppercase for a modern touch */
+}
+
+/* List of cart items */
+.cartList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Individual cart item styling */
+.cartItem {
+  padding: 15px 20px;
+  /* Increased horizontal padding */
+  border-bottom: 1px solid #e0e0e0;
+  /* Light border for separation */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  /* Rounded corners for cart items */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  /* Added transform for a lift effect */
+}
+
+/* Hover effect for individual cart items */
+.cartItem:hover {
+  background-color: #eaeaea;
+  /* Slightly darker gray on hover */
+  transform: translateY(-2px);
+  /* Subtle lift effect on hover */
+}
+
+/* No border for the last item */
+.cartItem:last-child {
+  border-bottom: none;
+}
+
+/* Price styling */
+.cartItemPrice {
+  font-weight: bold;
+  color: #e63946;
+  /* Vivid red for emphasis */
+  font-size: 1.6rem;
+  /* Larger price font */
+}
+
+/* Item name styling */
+.cartItemName {
+  color: #555;
+  /* Medium gray for item name */
+  font-size: 1.4rem;
+  /* Slightly larger font for item name */
+}
+
+/* Main cart button styling */
+.cartButton {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-top: 30px;
+  /* Increased margin for spacing */
+  background-color: #ff0000;
+  /* Green for primary action */
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  /* More rounded shape for the button */
+  font-size: 1.6rem;
+  /* Increased font size */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+  /* Added box-shadow transition */
+}
+
+/* Hover effect for the main button */
+.cartButton:hover {
+  background-color: #000000;
+  /* Darker green on hover */
+  transform: scale(1.05);
+  /* Slight scaling on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Shadow effect */
+}
+
+/* Delete button styling */
+.deleteButton {
+  background-color: #d9534f;
+  /* Red for delete action */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  /* More rounded delete button */
+  padding: 8px 12px;
+  /* Increased padding */
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  /* Smooth transition */
+}
+
+/* Hover effect for delete button */
+.deleteButton:hover {
+  background-color: #c82333;
+  /* Darker red on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .cartContainer {
+    padding: 20px;
+    /* Reduced padding for smaller screens */
+  }
+
+  .cartTitle {
+    font-size: 2rem;
+    /* Smaller title on mobile */
+  }
+
+  .cartButton {
+    font-size: 1.4rem;
+    /* Adjusted button font size */
+    padding: 14px;
+    /* Adjusted padding */
+  }
+
+  .cartItem {
+    flex-direction: column;
+    /* Stack items for smaller screens */
+    align-items: flex-start;
+    /* Align items to the start */
+    padding: 15px;
+    /* Adjust padding for smaller items */
+  }
+
+  .cartItemName {
+    margin-bottom: 10px;
+    /* Add space below name */
+  }
+}
+
+@media (max-width: 480px) {
+  .cartTitle {
+    font-size: 1.6rem;
+    /* Smaller title for mobile */
+  }
+
+  .cartButton {
+    font-size: 1.2rem;
+    /* Smaller button font size */
+    padding: 12px;
+    /* Adjusted padding */
+  }
+
+  .deleteButton {
+    font-size: 0.9em;
+    /* Smaller delete button font size */
+    padding: 6px 10px;
+    /* Adjusted delete button padding */
+  }
+}

@@ -1,0 +1,155 @@
+.product {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: #ffffff;
+  background-image: radial-gradient(circle at top center, rgba(255, 255, 255, 0.7), rgba(0, 0, 0, 0.5)), url(pbackground.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  margin: 30px auto;
+  width: 100%;
+  animation: slideInFade 1s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.productImage {
+  width: 400px;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: zoomInRotate 0.8s ease-in-out;
+}
+
+@keyframes zoomInRotate {
+  0% {
+    transform: scale(0.9) rotate(-5deg);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+.product h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.product p {
+  font-size: 1.2rem;
+  color: #ddd;
+  margin-bottom: 15px;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 15px 30px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background-color: #cc0000;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.songsList {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif; /* Updated font */
+}
+
+
+.songsList ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.songsList h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #e50914;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.songsList li {
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.songIcon {
+  margin-right: 8px;
+  color: #e50914;
+}
+
+
+
+@media (max-width: 768px) {
+  .product {
+    max-width: 100%;
+    margin: 15px auto;
+    padding: 20px;
+  }
+
+  .product h1 {
+    font-size: 1.6rem;
+  }
+
+  .product p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
