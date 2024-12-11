@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/T---Music/static/css/main.687035b7.css",
+    "main.js": "/T---Music/static/js/main.2531e0e0.js",
+    "static/js/453.37094a9a.chunk.js": "/T---Music/static/js/453.37094a9a.chunk.js",
+    "static/media/about.jpg": "/T---Music/static/media/about.fcaef5995752583539b0.jpg",
+    "static/media/pbackground.jpg": "/T---Music/static/media/pbackground.8dcb853cd682b9ea470d.jpg",
+    "index.html": "/T---Music/index.html",
+    "main.687035b7.css.map": "/T---Music/static/css/main.687035b7.css.map",
+    "main.2531e0e0.js.map": "/T---Music/static/js/main.2531e0e0.js.map",
+    "453.37094a9a.chunk.js.map": "/T---Music/static/js/453.37094a9a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.687035b7.css",
+    "static/js/main.2531e0e0.js"
+  ]
+}
